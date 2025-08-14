@@ -74,7 +74,7 @@ The executables will be built in the `datacenter/` subdirectories.
 
 ### Fetching the missing files
 
-Traffic traces based on the Hadoop workload are above 100MB, so are provided separately at [TODO].
+Traffic traces based on the Hadoop workload are above 100MB, so are provided separately to download [HERE](https://ncs-flare-project.mpi-inf.mpg.de/resources/hadoop_traces.tgz).
 Please download them and copy them to `traffic/` before running the experiments for Figure 16.
 
 ### Running the simulations via automated script
@@ -99,7 +99,7 @@ Note that Flare's performance will improve relative to other deadlines with long
 As we use a static random seed, the simulations are *fully deterministic*.
 Another *fast way to verify the correctness of our artifact* is to compare an output file with little running time (e.g., `-s 0.01`) and `diff` your shorter output file against our full results (e.g., `diff shorter.txt <(head -n $(wc -l < shorter.txt) full.txt)` ).
 As long as you run our commands with the given input files, you should see that the first part of both output files exactly matches.
-We provide raw output files for each of the simulations in a google drive [here](https://drive.google.com/drive/folders/1rUjKdxsWR7vzuIzpBmcU2Z4s-Oeh-6Mi?usp=share_link), which we suggest you copy to `run/raw`.
+We provide raw output files for each of the simulations at the bottom of each [figure table](#estimation-of-running-time-and-memory-consumption), which we suggest you copy to `run/raw`.
 We also provide a simple script to automate the diff process in `run/check_diff.sh`.
 You can simply run the script with a filename pattern and the script will compare all files matching the pattern in the `run/output` and `run/raw` directories.
 
@@ -201,6 +201,7 @@ Figure 14 and 15
 | hbh15us_ws30perc_0.3s_6P_2D_30perc.txt, SIMTIME 0.5sec             | 48+hrs | ~16GB  |
 | tdtcp55us_ws30perc_0.3s_40ecn_nosyn_10cwnd.txt, SIMTIME 0.5sec     | 6+hrs  | ~12GB  |
 | ndp55us_ws30perc_0.3s_80q.txt, SIMTIME 0.5sec                      | 16+hrs | ~128GB |
+| [Raw files](https://ncs-flare-project.mpi-inf.mpg.de/resources/Fig14_15_raw.tgz)     |
 
 Figure 16
 | Run Name                                                           | Time   | RAM    |
